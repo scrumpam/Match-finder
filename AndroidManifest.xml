@@ -30,6 +30,16 @@
             android:name="dmcs.matchfinder.ui.activities.MatchesActivity"
             android:label="@string/app_name" >
         </activity>
+        
+        <activity
+            android:name="dmcs.matchfinder.ui.activities.MatchLocationActivity"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <activity
+            android:name="dmcs.matchfinder.ui.activities.StadiumLocationActivity"
+            android:label="@string/app_name" >
+        </activity>
     </application>
 
 </manifest>
