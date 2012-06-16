@@ -16,8 +16,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import dmcs.matchfinder.model.Match;
+import dmcs.matchfinder.model.MatchLocation;
 import dmcs.matchfinder.model.Phase;
 import dmcs.matchfinder.model.Stadium;
+import dmcs.matchfinder.model.StadiumLocation;
 
 public class JSONDataGate {
 	private HttpClient httpClient;
@@ -97,5 +99,43 @@ public class JSONDataGate {
 		}
 
 		return matchesList;
+	}
+	
+	public ArrayList<StadiumLocation> getStadiumLocation(int indexOfStadium)
+			throws ClientProtocolException, IOException, JSONException {
+		HttpGet httpGet = new HttpGet(WEBSERVICES_URL + "stadiumLocation="
+				+ indexOfStadium);
+		JSONArray matchesArray = getData("stadiumLocation", httpGet);
+
+		ArrayList<StadiumLocation> matchesList = new ArrayList<StadiumLocation>();
+		for (int i = 0; i < matchesArray.length(); i++) {
+			JSONObject currentMatch = matchesArray.getJSONObject(i);
+			
+			String rep1 = currentMatch.getString("lat");
+			String rep2 = currentMatch.getString("lon");
+			
+			matchesList.add(new StadiumLocation(rep1, rep2));
+		}
+
+		return matchesList;
+	}
+	
+	public ArrayList<MatchLocation> getMatchLocation(int indexOfMatch)
+			throws ClientProtocolException, IOException, JSONException {
+		HttpGet httpGet = new HttpGet(WEBSERVICES_URL + "matchLocation=" + indexOfMatch);
+		JSONArray matchesLocationArray = getData("matchLocation", httpGet);
+
+		ArrayList<MatchLocation> matchLocation = new ArrayList<MatchLocation>();
+		for (int i = 0; i < matchesLocationArray.length(); i++) {
+			
+			JSONObject currentMatch = matchesLocationArray.getJSONObject(i);	
+			String lat = currentMatch.getString("lat");
+			String lon = currentMatch.getString("lon");
+			String name = currentMatch.getString("name");
+			String address = currentMatch.getString("address");		
+			matchLocation.add(new MatchLocation(lat, lon, name, address));
+		}
+
+		return matchLocation;
 	}
 }
