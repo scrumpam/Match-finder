@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 
 import org.apache.http.HttpResponse;
@@ -119,6 +120,18 @@ public class JSONDataGate {
 
 		return matchesList;
 	}
+	/*public HashMap<String,String> getStadiumLocation(int id)
+		throws ClientProtocolException, IOException, JSONException {
+			HttpGet httpGet = new HttpGet(WEBSERVICES_URL + "stadiumLocation="
+					+ id);
+			JSONArray stadiumLocation = getData("stadiumLocation", httpGet);
+			
+			HashMap<String,String> location = new HashMap<String, String>();
+			
+			
+			
+			return location;
+	}*/
 	
 	public ArrayList<MatchLocation> getMatchLocation(int indexOfMatch)
 			throws ClientProtocolException, IOException, JSONException {
