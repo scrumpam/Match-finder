@@ -23,7 +23,7 @@ import dmcs.matchfinder.model.StadiumLocation;
 
 public class JSONDataGate {
 	private HttpClient httpClient;
-	private final String WEBSERVICES_URL = "http://mateusz.aronnet.com/match_finder/?";
+	private final String WEBSERVICES_URL = "http://mateusz.aronnet.com/match_finder/?"; /*web service url*/
 
 	public JSONDataGate() {
 		this.httpClient = new DefaultHttpClient();
