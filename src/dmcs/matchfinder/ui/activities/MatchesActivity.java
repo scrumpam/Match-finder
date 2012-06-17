@@ -22,7 +22,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import dmcs.matchfinder.engine.JSONDataGate;
-import dmcs.matchfinder.googlemaps.GoogleMapActivity;
 import dmcs.matchfinder.model.Match;
 import dmcs.matchfinder.model.MatchLocation;
 
@@ -106,7 +105,7 @@ public class MatchesActivity extends ListActivity {
 								.getLon());
 
 						Intent in = new Intent(getApplicationContext(),
-								GoogleMapActivity.class);
+								MatchLocationActivity.class);
 
 						in.putExtra(MATCH_ID, idMatch);
 						in.putExtra("lat", lat);

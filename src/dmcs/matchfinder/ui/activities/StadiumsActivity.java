@@ -22,7 +22,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import dmcs.matchfinder.engine.JSONDataGate;
-import dmcs.matchfinder.googlemaps.GoogleMapActivity;
 import dmcs.matchfinder.model.Stadium;
 import dmcs.matchfinder.model.StadiumLocation;
 
@@ -117,7 +116,7 @@ public class StadiumsActivity extends ListActivity {
 								.getLon());
 
 						Intent in = new Intent(getApplicationContext(),
-								GoogleMapActivity.class);
+								StadiumLocationActivity.class);
 						Log.d(TAG, "Po³ozenie stadionuuuuu ! : " + lat + " , "
 								+ lon);
 						
