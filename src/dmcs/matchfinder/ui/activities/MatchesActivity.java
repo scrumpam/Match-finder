@@ -15,13 +15,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.AdapterView.OnItemClickListener;
 import dmcs.matchfinder.engine.JSONDataGate;
+import dmcs.matchfinder.googlemaps.GoogleMapActivity;
 import dmcs.matchfinder.model.Match;
 import dmcs.matchfinder.model.MatchLocation;
 
@@ -105,7 +106,7 @@ public class MatchesActivity extends ListActivity {
 								.getLon());
 
 						Intent in = new Intent(getApplicationContext(),
-								MatchLocationActivity.class);
+								GoogleMapActivity.class);
 
 						in.putExtra(MATCH_ID, idMatch);
 						in.putExtra("lat", lat);

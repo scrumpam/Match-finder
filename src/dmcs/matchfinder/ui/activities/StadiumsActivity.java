@@ -15,13 +15,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.AdapterView.OnItemClickListener;
 import dmcs.matchfinder.engine.JSONDataGate;
+import dmcs.matchfinder.googlemaps.GoogleMapActivity;
 import dmcs.matchfinder.model.Stadium;
 import dmcs.matchfinder.model.StadiumLocation;
 
@@ -116,7 +117,7 @@ public class StadiumsActivity extends ListActivity {
 								.getLon());
 
 						Intent in = new Intent(getApplicationContext(),
-								StadiumLocationActivity.class);
+								GoogleMapActivity.class);
 						Log.d(TAG, "Po³ozenie stadionuuuuu ! : " + lat + " , "
 								+ lon);
 						
