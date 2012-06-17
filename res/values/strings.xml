@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, EuroMatch2012FinderActivity!</string>
+    <string name="app_name">EuroMatch2012Finder</string>
+    <string name="findAMatch">Znajdź mecz</string>
+    <string name="stadiums">stadiony</string>
+    <string name="grup_a">Grupa A</string>
+    <string name="grup_b">Grupa B</string>
+    <string name="grupa_c">Grupa C</string>
+    <string name="grupa_d">Grupa D</string>
+    <string name="quarterfinals">Ćwierćfinały</string>
+    <string name="semifinals">Półfinały</string>
+    <string name="finals">Finały</string>
+    <string name="first_match">POLSKA-GRENLANDIA 12.06.2012,WARSZAWA, 18:00</string>
+    <string name="second_match">POLSKA-GRENLANDIA 12.06.2012,WARSZAWA, 18:00</string>
+    <string name="third_match">POLSKA-GRENLANDIA 12.06.2012,WARSZAWA, 18:00</string>
+    <string name="fourth_match">POLSKA-GRENLANDIA 12.06.2012,WARSZAWA, 18:00</string>
+    <string name="fifth_match">POLSKA-GRENLANDIA 12.06.2012,WARSZAWA, 18:00</string>
+    <string name="sixth_match">POLSKA-GRENLANDIA 12.06.2012,WARSZAWA, 18:00</string>
+
+</resources>
